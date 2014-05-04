@@ -1,5 +1,5 @@
-# Notecards
+# Flashcards
 
-Notecards is an adaptable flashcards program. It is designed to keep long lists of words and their definitions, translations, etc. in different categories.
+Flashcards is an adaptable flashcards program. It is designed to keep long lists of words and their definitions, translations, etc. in different categories.
 
-Notecards is only available on Android, however, there will be a web-based verison in the future.
+Currently, Flashcards is being developed for Windows, Linux, and Android. However, there will be a web-based version in the future.
