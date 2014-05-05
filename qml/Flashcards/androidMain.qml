@@ -9,13 +9,26 @@ Rectangle {
 
     color: "#333333"
 
-    Text {
-        text: "Flashcards"
-        color: "#ffffff"
+    AndroidToolbar {
+        id: toolbar
 
-        font.pixelSize: parent.height/16
+        indicatorShown: true
+        indicatorPosition: menu.position
 
-        anchors { horizontalCenter: parent.horizontalCenter; top: parent.top; topMargin: 50 }
+        name: "Flashcards"
+    }
+
+    HamburgerMenu {
+        id: menu
+
+        z: 30
+
+        anchors.top: toolbar.bottom
+
+        MenuItem { action: open }
+        MenuItem { action: edit }
+        MenuItem { action: repoEdit }
+        MenuItem { action: quitApp }
     }
 
     Button {
@@ -54,5 +67,30 @@ Rectangle {
         anchors.fill: parent
 
         visible: status == Loader.Ready
+    }
+
+    // ACTIONS -----------
+    Action {
+        id: open
+        text: "Open Set"
+        onTriggered: console.log("Open set action triggered")
+    }
+
+    Action {
+        id: edit
+        text: "Set Editor"
+        onTriggered: console.log("Edit set action triggered")
+    }
+
+    Action {
+        id: repoEdit
+        text: "Repository Manager"
+        onTriggered: console.log("Repository manager requested")
+    }
+
+    Action {
+        id: quitApp
+        text: "Quit"
+        onTriggered: Qt.quit()
     }
 }
