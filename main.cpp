@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
     qmlRegisterType<XMLWriter>("XMLOps",1,0,"XMLWriter");
 
-    /*#ifdef Q_OS_ANDROID*/
+    //#ifdef Q_OS_ANDROID
     QtQuick2ApplicationViewer viewer;
     viewer.setMainQmlFile(QStringLiteral("qml/Flashcards/androidMain.qml"));
     viewer.showExpanded();
